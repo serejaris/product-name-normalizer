@@ -1,0 +1,12 @@
+[project]
+name = "product-name-normalizer"
+version = "0.1.0"
+description = "MCP server for product name normalization"
+requires-python = ">=3.10"
+dependencies = ["mcp[cli]>=1.8.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
