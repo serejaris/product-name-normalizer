@@ -4,7 +4,7 @@ product-name-normalizer: normalize product/tool names in generated text.
 Design goals:
 - Core logic is stdlib-only (so other projects can `import fix_terms` with zero deps).
 - Optional MCP server entrypoint for Claude Code / MCP clients.
-- Central, user-scope storage: ~/.claude/data/product-terms.json (overridable in tests via env var).
+- Repo-local dictionary: data/product-terms.json (overridable via TERM_FIXER_TERMS_PATH).
 """
 
 from __future__ import annotations
