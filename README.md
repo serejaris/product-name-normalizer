@@ -93,3 +93,9 @@ Run tests:
 ```bash
 uv run pytest
 ```
+
+Smoke test MCP (spawns the server and calls tools over stdio):
+
+```bash
+uv run python scripts/smoke_mcp.py
+```
