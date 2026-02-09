@@ -36,7 +36,9 @@ def _get_terms_path() -> Path:
     override = os.environ.get("TERM_FIXER_TERMS_PATH")
     if override:
         return Path(override).expanduser()
-    return Path.home() / ".claude" / "data" / "product-terms.json"
+    # Default to a repo-local dictionary so all "server files" live together.
+    # This keeps state visible/versionable and avoids hidden global state in ~/.claude.
+    return Path(__file__).resolve().parent / "data" / "product-terms.json"
 
 
 def _atomic_write_json(path: Path, obj: Any) -> None:

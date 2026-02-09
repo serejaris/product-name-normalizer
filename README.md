@@ -26,7 +26,7 @@ from term_fixer import fix_terms
 text = fix_terms("Cloudcode vs Cursor")
 ```
 
-Dictionary is stored in `~/.claude/data/product-terms.json` (override with `TERM_FIXER_TERMS_PATH`).
+Dictionary is stored in `data/product-terms.json` (override with `TERM_FIXER_TERMS_PATH`).
 
 ### Dictionary format
 
@@ -47,7 +47,7 @@ from term_fixer import add_term
 add_term("Claude Code", ["Cloudcode", "ClaudeCode"])
 ```
 
-Or edit `~/.claude/data/product-terms.json` manually (it is a simple JSON map).
+Or edit `data/product-terms.json` manually (it is a simple JSON map).
 
 ## How It Works
 
@@ -56,6 +56,12 @@ Or edit `~/.claude/data/product-terms.json` manually (it is a simple JSON map).
 - HTML safety: it avoids touching tag/attribute content by only rewriting *text segments* outside `<...>`
 - It applies longest variants first to reduce partial-overlap issues.
 - Compiled regex rules are cached and invalidated automatically when `product-terms.json` changes (mtime-based).
+
+## Files In This Repo
+
+- `term_fixer.py`: stdlib-only core + MCP entrypoint
+- `data/product-terms.json`: the dictionary used by default
+- `scripts/smoke_mcp.py`: end-to-end MCP smoke test
 
 Non-goals (for now):
 - fuzzy matching / spelling suggestions
