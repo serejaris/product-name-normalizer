@@ -1,3 +1,31 @@
+<!-- hq-readme-ru: 2026-05-09 -->
+# product-name-normalizer
+
+Коротко: Рабочий репозиторий: Dictionary-driven product/tool name normalization for AI text (Python + MCP server).
+
+## Что здесь
+
+- Назначение: Рабочий репозиторий: Dictionary-driven product/tool name normalization for AI text (Python + MCP server).
+- Основной стек: Python.
+- Видимость: публичный репозиторий.
+- Статус: активный репозиторий; актуальность проверять по issues и последним коммитам.
+
+## Где смотреть работу
+
+- Задачи и текущие решения: GitHub Issues этого репозитория.
+- Код и материалы: файлы в корне и профильные папки проекта.
+- Связь с HQ: если проект влияет на продукт, контент или воронку, сверяйте канон в `0_hq` и репозитории-владельце.
+
+## Для агентов
+
+- Сначала прочитайте этот README и открытые issues.
+- Не переносите сюда канон соседних проектов без ссылки на источник.
+- Перед правками проверьте существующие scripts, package.json/pyproject и локальные инструкции.
+
+---
+
+## Исходный README
+
 # product-name-normalizer
 
 Local (user-scope) normalization of product/tool names for AI-generated text.
